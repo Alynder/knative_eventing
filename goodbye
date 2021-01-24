@@ -1,0 +1,8 @@
+curl -v "http://broker-ingress.knative-eventing.svc.cluster.local/eventing-test/default" \
+  -X POST \
+  -H "Ce-Id: say-goodbye" \
+  -H "Ce-Specversion: 1.0" \
+  -H "Ce-Type: not-greeting" \
+  -H "Ce-Source: sendoff" \
+  -H "Content-Type: application/json" \
+  -d '{"msg":"Goodbye Knative!"}'
